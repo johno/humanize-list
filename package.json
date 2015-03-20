@@ -1,0 +1,29 @@
+{
+  "name": "humanize-list",
+  "description": "Comma delimit a list for human readability, the Oxford comma is optional.",
+  "author": "John Otander",
+  "version": "0.0.1",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jshint . && mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/johnotander/humanize-list.git"
+  },
+  "keywords": [
+
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/johnotander/humanize-list/issues"
+  },
+  "homepage": "https://github.com/johnotander/humanize-list",
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "*"
+  }
+}
