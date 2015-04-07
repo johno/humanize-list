@@ -1,6 +1,6 @@
 # humanize-list [![Build Status](https://secure.travis-ci.org/johnotander/humanize-list.png?branch=master)](https://travis-ci.org/johnotander/humanize-list)
 
-Comma delimit a list for human readability, the Oxford comma is optional.
+Comma delimit an array for human readability, the Oxford comma is optional.
 
 ## Installation
 
@@ -13,8 +13,17 @@ npm install --save humanize-list
 ```javascript
 var humanizeList = require('humanize-list');
 
-humanizeList();  // => true
+humanizeList(['apples', 'tomatoes', 'unicorns']); // => 'apples, tomatoes and unicorns'
+humanizeList(['apples', 'tomatoes', 'unicorns'], { oxfordComma: true }); // => 'apples, tomatoes, and unicorns'
+humanizeList(['apples', 'tomatoes', 'unicorns'], { conjunction: 'or' }); // => 'apples, tomatoes or unicorns'
+humanizeList(['apples', 'tomatoes', 'unicorns'], { skipConjunction: true }); // => 'apples, tomatoes, unicorns'
 ```
+
+### Options
+
+- `oxfordComma` Boolean - Specify whether the Oxford comma should be included. Default: `false`
+- `conjunction` String - Specify a conjunction. Default: `'and'`
+- `skipConjunction` Boolean - Skip the conjunction altogether. Default: `false`
 
 ## License
 

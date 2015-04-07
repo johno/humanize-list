@@ -1,6 +1,6 @@
 {
   "name": "humanize-list",
-  "description": "Comma delimit a list for human readability, the Oxford comma is optional.",
+  "description": "Comma delimit an array for human readability, the Oxford comma is optional.",
   "author": "John Otander",
   "version": "0.0.1",
   "main": "index.js",
@@ -15,7 +15,13 @@
     "url": "https://github.com/johnotander/humanize-list.git"
   },
   "keywords": [
-
+    "humanize",
+    "array",
+    "list",
+    "format",
+    "comma",
+    "delimit",
+    "oxford"
   ],
   "license": "MIT",
   "bugs": {
