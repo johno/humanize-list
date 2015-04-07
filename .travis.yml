@@ -1,6 +1,17 @@
 sudo: false
 language: node_js
 
+cache:
+  directories:
+    - node_modules
+
+install:
+  npm install -g jshint
+  npm install
+
+script:
+  npm test
+
 node_js:
   - 'iojs'
   - '0.12'
