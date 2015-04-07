@@ -6,7 +6,7 @@ cache:
     - node_modules
 
 install:
-  - npm install -g jshint
+  - npm install jshint
   - npm install
 
 script:
