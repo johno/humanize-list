@@ -8,7 +8,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "npm run hint && mocha test",
+    "test": "mocha test",
     "hint": "jshint . --exclude-path=node_modules"
   },
   "repository": {
