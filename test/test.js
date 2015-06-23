@@ -9,6 +9,10 @@ describe('humanize-list', function() {
     assert.equal(humanizeList(['apples', 'tomatoes', 'unicorns']), 'apples, tomatoes and unicorns');
   });
 
+  it('should correctly handle a single element list', function() {
+    assert.equal(humanizeList(['foo']), 'foo');
+  });
+
   it('should add the oxford comma when set to true', function() {
     assert.equal(humanizeList(['apples', 'tomatoes', 'unicorns'], { oxfordComma: true }), 'apples, tomatoes, and unicorns');
   });

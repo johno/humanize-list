@@ -10,6 +10,10 @@ module.exports = function humanizeList(list, options) {
 
   var listLength = list.length;
 
+  if (listLength === 1) {
+    return list[0];
+  }
+
   if (options.skipConjunction) {
     return list.join(', ');
   }
