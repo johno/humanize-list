@@ -19,7 +19,7 @@ module.exports = function humanizeList (list, options) {
   }
 
   var humanizedList = ''
-  for (var i = 0 i < listLength i++) {
+  for (var i = 0; i < listLength; i++) {
     if (i === listLength - 1) {
       if (options.oxfordComma) {
         humanizedList += ','
