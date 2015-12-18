@@ -2,7 +2,7 @@
   "name": "humanize-list",
   "description": "Comma delimit an array for human readability, the Oxford comma is optional.",
   "author": "John Otander",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "license": "MIT",
   "main": "index.js",
   "directories": {
