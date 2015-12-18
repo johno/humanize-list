@@ -1,27 +1,34 @@
-'use strict';
+'use strict'
 
-var assert = require('assert');
-var humanizeList = require('..');
+import test from 'ava'
+import humanizeList from './'
 
-describe('humanize-list', function() {
+test('returns the correct humanized list', t => {
+  t.plan(1)
 
-  it('should do return the correct humanized list', function() {
-    assert.equal(humanizeList(['apples', 'tomatoes', 'unicorns']), 'apples, tomatoes and unicorns');
-  });
+  t.same(humanizeList(['apples', 'tomatoes', 'unicorns']), 'apples, tomatoes and unicorns')
+})
 
-  it('should correctly handle a single element list', function() {
-    assert.equal(humanizeList(['foo']), 'foo');
-  });
+test('handles a single element list', t => {
+  t.plan(1)
 
-  it('should add the oxford comma when set to true', function() {
-    assert.equal(humanizeList(['apples', 'tomatoes', 'unicorns'], { oxfordComma: true }), 'apples, tomatoes, and unicorns');
-  });
+  t.same(humanizeList(['foo']), 'foo')
+})
 
-  it('should add a custom conjunction when specified', function() {
-    assert.equal(humanizeList(['apples', 'tomatoes', 'unicorns'], { conjunction: 'or' }), 'apples, tomatoes or unicorns');
-  });
+test('adds the oxford comma when set to true', t => {
+  t.plan(1)
 
-  it('should skip the conjunction when specified', function() {
-    assert.equal(humanizeList(['apples', 'tomatoes', 'unicorns'], { skipConjunction: true }), 'apples, tomatoes, unicorns');
-  });
-});
+  t.same(humanizeList(['apples', 'tomatoes', 'unicorns'], { oxfordComma: true }), 'apples, tomatoes, and unicorns')
+})
+
+test('adds a custom conjunction when specified', t => {
+  t.plan(1)
+
+  t.same(humanizeList(['apples', 'tomatoes', 'unicorns'], { conjunction: 'or' }), 'apples, tomatoes or unicorns')
+})
+
+test('skips the conjunction when specified', t => {
+  t.plan(1)
+
+  t.same(humanizeList(['apples', 'tomatoes', 'unicorns'], { skipConjunction: true }), 'apples, tomatoes, unicorns')
+})
