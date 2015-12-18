@@ -3,18 +3,16 @@
   "description": "Comma delimit an array for human readability, the Oxford comma is optional.",
   "author": "John Otander",
   "version": "1.0.0",
+  "version": "0.0.1",
+  "license": "MIT",
   "main": "index.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "test": "mocha test",
-    "hint": "jshint . --exclude-path=node_modules"
+    "test": "ava"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/johnotander/humanize-list.git"
-  },
+  "repository": "johnotander/humanize-list",
   "keywords": [
     "humanize",
     "array",
@@ -24,13 +22,8 @@
     "delimit",
     "oxford"
   ],
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/johnotander/humanize-list/issues"
-  },
-  "homepage": "https://github.com/johnotander/humanize-list",
   "dependencies": {},
   "devDependencies": {
-    "mocha": "*"
+    "ava": "^0.8.0"
   }
 }

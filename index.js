@@ -1,37 +1,37 @@
-'use strict';
+'use strict'
 
-module.exports = function humanizeList(list, options) {
+module.exports = function humanizeList (list, options) {
   if (!Array.isArray(list)) {
-    throw new TypeError('humanize-list expected an array');
+    throw new TypeError('humanize-list expected an array')
   }
 
-  options = options || {};
-  options.conjunction = options.conjunction || 'and';
+  options = options || {}
+  options.conjunction = options.conjunction || 'and'
 
-  var listLength = list.length;
+  var listLength = list.length
 
   if (listLength === 1) {
-    return list[0];
+    return list[0]
   }
 
   if (options.skipConjunction) {
-    return list.join(', ');
+    return list.join(', ')
   }
 
-  var humanizedList = '';
+  var humanizedList = ''
   for (var i = 0; i < listLength; i++) {
     if (i === listLength - 1) {
       if (options.oxfordComma) {
-        humanizedList += ',';
+        humanizedList += ','
       }
 
-      humanizedList += ' ' + options.conjunction + ' ';
+      humanizedList += ' ' + options.conjunction + ' '
     } else if (i !== 0) {
-      humanizedList += ', ';
+      humanizedList += ', '
     }
 
-    humanizedList += list[i];
+    humanizedList += list[i]
   }
 
-  return humanizedList;
-};
+  return humanizedList
+}

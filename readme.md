@@ -11,12 +11,12 @@ npm install --save humanize-list
 ## Usage
 
 ```javascript
-var humanizeList = require('humanize-list');
+var humanizeList = require('humanize-list')
 
-humanizeList(['apples', 'tomatoes', 'unicorns']); // => 'apples, tomatoes and unicorns'
-humanizeList(['apples', 'tomatoes', 'unicorns'], { oxfordComma: true }); // => 'apples, tomatoes, and unicorns'
-humanizeList(['apples', 'tomatoes', 'unicorns'], { conjunction: 'or' }); // => 'apples, tomatoes or unicorns'
-humanizeList(['apples', 'tomatoes', 'unicorns'], { skipConjunction: true }); // => 'apples, tomatoes, unicorns'
+humanizeList(['apples', 'tomatoes', 'unicorns']) // => 'apples, tomatoes and unicorns'
+humanizeList(['apples', 'tomatoes', 'unicorns'], { oxfordComma: true }) // => 'apples, tomatoes, and unicorns'
+humanizeList(['apples', 'tomatoes', 'unicorns'], { conjunction: 'or' }) // => 'apples, tomatoes or unicorns'
+humanizeList(['apples', 'tomatoes', 'unicorns'], { skipConjunction: true }) // => 'apples, tomatoes, unicorns'
 ```
 
 ### Options
